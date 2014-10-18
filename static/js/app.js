@@ -102,6 +102,7 @@ $(document).ready(function(){
   }
 
   function renderWordBar(data) {
+    var data = data.slice(0, 6);
     var relatedHTML = twig({ ref: "related" }).render({related: data});
 
     // Display the rendered template
