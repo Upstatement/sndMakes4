@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+    <head>
+	    <meta charset="UTF-8" />
+	    <title>xxx</title>
+	    {% if meta_description %}
+	        <meta name="description" content="{{meta_description}}">
+	    {% endif %}
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	    <!-- Favicon + Touch icon -->
+	    <link rel="shortcut icon" href="/">
+	    <link rel="apple-touch-icon" href="//apple-touch-icon-precomposed.png">
+
+
+	    <meta property="og:site_name" content="{{site.name}}" />
+
+
+
+
+
+	    <!-- Site stylesheet -->
+	    <link rel="stylesheet" href="/static/css/screen.css" type="text/css"/>
+
+
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+	    <!-- Modernizr -->
+	   <!-- <script type="text/javascript" src="/static/components/modernizr/modernizr.js"></script> -->
+
+
+
+
+	</head>
+
+	<body class="{{body_class}}" data-source="base.twig">
+
+
+
+
+
+
+
+
+		<section id="content" role="main" class="content-wrapper">
+			{# Page Header #}
+			{% block page_header %} {% endblock %}
+
+			<div class="content-inner l-site-width">
+
+				<!-- Content -->
+				<!-- ===================================== -->
+				{% block content %}
+
+
+
+
+
+				{% endblock %} {# /content #}
+
+
+			</div> <!-- /content-inner -->
+		</section> <!-- /content -->
+
+
+
+
+
+		<!-- ======================== javascript =============================== -->
+        {% block javascript %}
+
+
+
+
+
+
+			{% block page_js %} {% endblock %}
+
+        {% endblock %} {# /javascript #}
+
+	</body>
+</html>

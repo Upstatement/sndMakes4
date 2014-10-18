@@ -19,7 +19,7 @@ add_import_path "bower_components/Upbase/components"
 #line_comments = false
 
 line_comments = false
-output_style = :compressed
+output_style = :expanded
 # output_style = :compact :compressed :nested :expanded
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
