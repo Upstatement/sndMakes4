@@ -14,14 +14,13 @@ $(document).ready(function(){
 
   function getHeadlines(event) {
     var $input = $('.js-search-input');
-    var searchTerms = $input.value;
+    var searchTerms = $input.value.split(' ').join(',');
     ajaxNews(searchTerms);
   }
 
   function ajaxNews(terms) {
-
-    var terms
-    var url = ""; //something;
+    console.log('terms: ' + terms);
+    var url = "search.php?terms=" + terms; //something;
 
     // send request to server for json of search data
     // promise with callback to parse data
@@ -29,14 +28,13 @@ $(document).ready(function(){
     $.ajax({
       dataType: "json",
       url: url,
-      data: data,
-      success: parseData(data)
+      success: parseData
     });
 
   }
 
   function parseData(data) {
-
+    console.log("data: " + data);
     // parse the json
     // callback and send data to template engine
 
@@ -60,5 +58,9 @@ $(document).ready(function(){
   //----- LISTENERS -----//
 
   $('.search').on('submit', getHeadlines);
+
+  //----- TESTS -----//
+
+  ajaxNews('cheese,bears,ebola');
 
 });
