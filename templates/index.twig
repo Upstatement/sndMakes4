@@ -3,36 +3,50 @@
 
 {% block content %}
 
-	Hi {{name}}
-
-
 
 {# =============================== #}
 	{# Header #}
-
+<nav>
 	{% block header %}
-		<h5>header goes here</h5>
+	<div class="logo">
+		<h1>Anglr</h1>
+	</div>
 	{% endblock %} {# /header #}
-
 
 	<div class="input-mod">
 		{# =============================== #}
 		{# Search #}
 		{% block search %}
 			{# include "search-form.twig" #}
+			<form action="" method="get" id="search_form">
+				<div class="search-term-wrapper">
+					<ul class="tokens">
+						<li>boston</li>
+						<li>patriots</li>
+					</ul>
+				</div>
+        		<input type="search" class="search-field" id="search" name="search" value="">
+        		</input>
+        		<!-- TODO: this needs to be <li>'s -->
+    		</form>
+    		<div class="search-toggle">
+    			<span class="active">Trending</span><span>Latest</span>
+    		</div>
+    		<span class="search-icon">
+    		</span>
 		{% endblock %} {# /search}
 
 
 		{# =============================== #}
 		{# Filters #}
-		{% block search_filters %}
+		{# block search_filters %}
 			<div class="search-filter-mod">
 				{# include "search-filters.twig" #}
 			</div> <!-- /search-filter-mod -->
-		{% endblock %}  {# /filters #}
+		{# endblock %}  {# /filters #}
 
 	</div> <!-- /input-mod -->
-
+</nav>
 
 
 	<div class="result-mod">
@@ -40,6 +54,11 @@
 		{# Results  #}
 		{% block result_filters %}
 			<div class="result-filter-mod">
+				<ul class="tokens">
+					<li>Keyword</li>
+					<li>Another</li>
+					<li>Keyword</li>
+				</ul>
 				{# include "result-filters.twig" #}
 			</div> <!-- /result-filter-mod -->
 		{% endblock %}

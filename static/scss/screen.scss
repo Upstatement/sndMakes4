@@ -77,14 +77,148 @@
 // @import "base/print";
 
 
+// COLOR VARIABLES
 
+$primary: #3e606f;
+$secondary: #69a2bb;
+$inactive-bg: #548195;
+$inactive-text: rgba(255,255,255,0.8);
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 
+body {
+  background: #fff;
+  font-size: 16px;
+}
 
+// ==========
+//
+// NAV
+//
+// ==========
 
+nav {
+  background: $primary;
+  padding: 1em;
+  color: #fff;
+  h1 {
+    display: inline-block;
+  }
+}
 
-body { background: red; }
+// ==========
+//
+// NAV STRUCTURE
+//
+// ==========
+.logo {
+  width: 5%;
+}
 
-h4 { padding: 12px; margin: 20px; font-size: 24px; background-color: pink; color: #fff; }
+.input-mod {
+  width: 75%;
+}
 
-h5 { padding: 12px; margin: 20px; font-size: 36px; background-color: black; color: yellow; }
+// ==========
+//
+// SEARCH BAR
+//
+// ==========
+
+.logo,
+.input-mod,
+.search-field,
+.search-toggle,
+#search_form {
+  display: inline-block;
+}
+
+.search-field {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 13px;
+  border-radius: 4px;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: hsl(0, 100%, 100%);
+  border: 1px solid hsl(0, 0%, 80%);
+  -webkit-box-shadow: inset 0 1px 1px hsla(0, 0%, 0%, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px hsla(0, 0%, 0%, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.token {
+  color: #eee;
+  display: inline-block;
+}
+
+.search-toggle {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  span {
+    padding: 13px;
+    background-color: $inactive-bg;
+    color: $inactive-text;
+    &.active {
+      background-color: $secondary;
+    }
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}
+
+// help
+#search_form {
+  position: relative;
+  width: 80%;
+}
+
+.search-term-wrapper {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+}
+
+.tokens {
+  li {
+    color: hsl(0, 0%, 0%);
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    vertical-align: middle;
+    color: #fff;
+    background-color: $secondary;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 4px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// ==============================
+//
+// SUGGESTED KEYWORDS CAROUSEL
+//
+// ==============================
+.result-filter-mod {
+  padding: 1em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee;
+}
