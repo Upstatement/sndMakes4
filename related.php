@@ -1,4 +1,5 @@
 <?php
+
 	require_once('angler.php');
 
 	$terms = $_GET['terms'];

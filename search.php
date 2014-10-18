@@ -1,5 +1,6 @@
 <?php
 
+require_once('angler.php');
 
 $terms = $_GET['terms'];
 $google_results = Angler::get_google_results( $terms );
