@@ -277,8 +277,9 @@ button {
 }
 
 body {
-  background: red;
+  background: #f9f9f9;
   font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 h5 {
@@ -291,16 +292,6 @@ h5 {
 
 .headlines-mod {
   padding: 0 40px;
-}
-
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-body {
-  background: #fff;
-  font-size: 16px;
 }
 
 nav {
@@ -408,10 +399,24 @@ nav h1 {
   border-bottom: 1px solid #eee;
   box-shadow: 0px 3px 4px 0px rgba(178, 178, 178, 0.2);
 }
-.result-filter-mod .tz {
-  background-color: whitesmoke;
+
+.tz {
+  background-color: #fff;
   padding: 40px;
 }
-.result-filter-mod .tz + .result-filter-mod .tz {
+.tz + .tz {
   margin-top: 40px;
+}
+
+.tz-timestamp {
+  color: #383437;
+}
+
+.tz-byline {
+  color: #474245;
+}
+
+.tz-head-link,
+.source-link {
+  color: #2a272b;
 }

@@ -8,19 +8,61 @@
 
 @import "base";
 
-// --------------------------------------------
-// --------------------------------------------
-//
-// Variables
-//
-// --------------------------------------------
-// --------------------------------------------
 
-// @import "base/color-var";
-// @import "base/breakpoint-var";
-// @import "base/var-fonts";
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Type Variables
+//
+// --------------------------------------------
+// --------------------------------------------
 
 $base-font: 'Open Sans', sans-serif;
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Color Variables
+//
+// --------------------------------------------
+// --------------------------------------------
+
+
+
+
+$bg: #f9f9f9;
+
+$social-hot: #cb1e48;
+
+$primary: #3e606f;
+$secondary: #69a2bb;
+$inactive-bg: #548195;
+$inactive-text: rgba(255,255,255,0.8);
+
+
+$black-100: 	#2a272b; 				// 42, 29, 43
+$black-90: 		#383437;				// 56, 52, 55
+$black-80: 		#474245; 				// 71, 66, 69
+$black-70: 		#565153; 				// 86, 81, 83
+$black-60: 		#686265;				// 104, 98, 101
+$black-50: 		#7a7577; 				// 122, 117, 119
+$black-40: 		#908b8c; 				// 144, 139, 140
+$black-30: 		#a6a1a3; 				// 166, 161, 163
+$black-20: 		#bfbbbc; 				// 191, 187, 188
+$black-10: 		#dad7d7; 				// 218, 215, 215
+
+
+
+
+$tz-hed: $black-100;
+$tz-author: $black-80;
+$tz-text: $black-60;
+$tz-source: $black-90;
 
 
 
@@ -32,17 +74,24 @@ $base-font: 'Open Sans', sans-serif;
 // --------------------------------------------
 // --------------------------------------------
 
+// * {
+//   box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+// }
+
 
 
 body {
-	background: red;
+	background: $bg;
 	font-family: $base-font;
+	font-size: 16px;
 
 }
 
 
-
 h5 { padding: 12px; margin: 20px 0; font-size: 36px; background-color: black; color: yellow; }
+
+
 
 
 // --------------------------------------------
@@ -58,25 +107,8 @@ h5 { padding: 12px; margin: 20px 0; font-size: 36px; background-color: black; co
 }
 
 
-// @import "base/print";
 
 
-// COLOR VARIABLES
-
-$primary: #3e606f;
-$secondary: #69a2bb;
-$inactive-bg: #548195;
-$inactive-text: rgba(255,255,255,0.8);
-
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-body {
-  background: #fff;
-  font-size: 16px;
-}
 
 // ==========
 //
@@ -98,6 +130,7 @@ nav {
 // NAV STRUCTURE
 //
 // ==========
+
 .logo {
   width: 5%;
 }
@@ -201,11 +234,13 @@ nav {
 // SUGGESTED KEYWORDS CAROUSEL
 //
 // ==============================
+
 .result-filter-mod {
   padding: 1em;
   margin-bottom: 2em;
   border-bottom: 1px solid #eee;
   box-shadow: 0px 3px 4px 0px rgba(178, 178, 178, 0.2);
+}
 
 // --------------------------------------------
 // --------------------------------------------
@@ -216,10 +251,17 @@ nav {
 // --------------------------------------------
 
 .tz {
-	background-color: whitesmoke;
+	background-color: #fff;
 	padding: 40px;
 	& + & {
 		margin-top: 40px;
 	}
 }
-}
+
+
+.tz-timestamp { color: $tz-source; }
+
+.tz-byline { color: $tz-author; }
+
+.tz-head-link,
+.source-link { color: $black-100; }
