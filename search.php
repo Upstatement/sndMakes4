@@ -12,6 +12,11 @@ class Angler {
 		$results = $results->responseData->results;
 		foreach ( $results as &$result ) {
 			$result->link = $result->unescapedUrl;
+			$result->headline = $result->title;
+			$result->source = new stdClass();
+			$result->source->name = $result->publisher;
+			$url_parts = parse_url($result->link);
+			$result->source->icon = 'http://'.$url_parts['host'].'/apple-touch-icon.png';
 		}
 		return $results;
 	}
@@ -29,6 +34,7 @@ class Angler {
 		$social = new stdClass();
 		$social->facebook = self::get_social_stats_facebook( $link );
 		$social->twitter = self::get_social_stats_twitter( $link );
+		$social->score = rand(1, 100);
 		return $social;
 	}
 
@@ -54,4 +60,5 @@ $google_results = Angler::get_google_results( $terms );
 foreach ( $google_results as &$gr ) {
 	$gr->social = Angler::get_social_stats( $gr->link );
 }
+//print_r( $google_results );
 echo json_encode( $google_results );
