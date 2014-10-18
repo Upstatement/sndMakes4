@@ -105,6 +105,9 @@ $(document).ready(function(){
     var data = data.slice(0, 6);
     var relatedHTML = twig({ ref: "related" }).render({related: data});
 
+    // First clear the related keywords bar
+    $('.result-filter-mod').empty();
+    
     // Display the rendered template
     $('.result-filter-mod').html(relatedHTML);
   }
@@ -128,6 +131,18 @@ $(document).ready(function(){
     }
     insertSearchTermsIntoSearchBar();
   });
+
+  // Clear the input form (and fake input tokens) on focus
+  var clearSearchBar = function() {
+    $('#headline-search-input').focus(function() {
+      console.log('focus');
+      $(this).val("");
+      $('#search-term-tokens').empty();
+      //$('.result-filter-mod').empty();
+    })
+  };
+
+  clearSearchBar();
 
   //----- TESTS -----//
 
