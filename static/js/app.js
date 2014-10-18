@@ -1,16 +1,27 @@
 $(document).ready(function(){
 
+  //----- VARS -----//
 
   var template = twig({
     id: "headlines",
-    href: "templates/posts.twig",
+    href: "templates/headlines.twig",
     async: true
 
     // load: function(template) { }
   });
 
-  function ajaxNews() {
-    var url = //something;
+  //----- FUNCTIONS -----//
+
+  function getHeadlines(event) {
+    var $input = $('.js-search-input');
+    var searchTerms = $input.value;
+    ajaxNews(searchTerms);
+  }
+
+  function ajaxNews(terms) {
+
+    var terms
+    var url = ""; //something;
 
     // send request to server for json of search data
     // promise with callback to parse data
@@ -19,7 +30,7 @@ $(document).ready(function(){
       dataType: "json",
       url: url,
       data: data,
-      success: parseData(data);
+      success: parseData(data)
     });
 
   }
@@ -46,5 +57,8 @@ $(document).ready(function(){
 
   }
 
+  //----- LISTENERS -----//
+
+  $('.search').on('submit', getHeadlines);
 
 });
