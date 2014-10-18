@@ -68,6 +68,23 @@ $(document).ready(function(){
   //----- LISTENERS -----//
 
   $('.headline-search').on('submit', getHeadlines);
+  $('.headline-search').on('submit', function() {
+    event.preventDefault();
+    var $input = $('.js-headline-search');
+    var searchTerms = $input.val().split(' ');
+    var $numberOfSearchTerms = searchTerms.length;
+
+    var insertSearchTermsIntoSearchBar = function() {
+      for (var i = 0; i < $numberOfSearchTerms; i++) {
+        $('#search-term-tokens').append("<li>" + searchTerms[i] + "</li>");
+      }
+    }
+    insertSearchTermsIntoSearchBar();
+    //console.log(searchTerms[0]);
+    //$('#search-term-tokens').append("<li>helooooo</li>");
+    // parse each word out
+    // insert each word into the id 'search-term-tokens'
+  });
 
   //----- TESTS -----//
 
