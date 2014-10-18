@@ -4,10 +4,9 @@ $(document).ready(function(){
 
   var template = twig({
     id: "headlines",
-    href: "templates/headlines.twig",
-    async: true
+    href: "templates/ajax-headlines.twig",
 
-    // load: function(template) { }
+     load: function(template) { console.log(template); }
   });
 
   //----- FUNCTIONS -----//
@@ -35,6 +34,7 @@ $(document).ready(function(){
   }
 
   function testData (data) {
+    console.log('test fired');
     console.log(data);
 //    var $testItem = $('pre');
 //    $testItem.text(data);
@@ -42,7 +42,7 @@ $(document).ready(function(){
   }
 
   function parseData(data) {
-    console.log("data: " + data);
+    console.log(data);
 
     parsedData = data;
     // parse the json
@@ -52,16 +52,16 @@ $(document).ready(function(){
 
   }
 
-  function renderTemplate() {
+  function renderTemplate(parsedData) {
 
     // render twig template with data
     // send to browser
 
     // render the template
-    var headlinesHTML = twig({ ref: "headlines" }).render(template);
+    var headlinesHTML = twig({ ref: "headlines" }).render({headlines: parsedData});
 
     // Display the rendered template
-    $('headline-container').innerHTML = headlinesHTML;
+    $('.headlines-mod').html(headlinesHTML);
 
   }
 
@@ -71,6 +71,6 @@ $(document).ready(function(){
 
   //----- TESTS -----//
 
-  ajaxNews('cheese,bears,ebola', true);
+//  ajaxNews('cheese,bears,ebola', true);
 
 });
