@@ -22,21 +22,6 @@
 
 
 
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Mixins
-//
-// --------------------------------------------
-// --------------------------------------------
-
-// @import "base/mixin-bp";
-// @import "base/mixin-fonts";
-
-
-
-
 // --------------------------------------------
 // --------------------------------------------
 //
@@ -45,46 +30,40 @@
 // --------------------------------------------
 // --------------------------------------------
 
-// @import "base/border";
-
-// @import "base/animation";
-
-// @import "base/layout";
-// @import "base/type";
-// @import "base/buttons";
-
-// @import "base/objects";
-// @import "base/forms";
-// @import "base/icons";
-
-// @import "base/gallery";
-
-// @import "base/header";
-// @import "base/footer";
-
-// @import "base/aside";
-// @import "base/nav";
-// @import "base/lists";
-
-// @import "base/article";
-
-// @import "base/tease";
-
-// @import "base/stage";
-
-// @import "base/page-header";
-
-// @import "base/print";
-
-
-
-
-
-
 
 
 body { background: red; }
 
-h4 { padding: 12px; margin: 20px; font-size: 24px; background-color: pink; color: #fff; }
 
-h5 { padding: 12px; margin: 20px; font-size: 36px; background-color: black; color: yellow; }
+
+h5 { padding: 12px; margin: 20px 0; font-size: 36px; background-color: black; color: yellow; }
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Layout
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.headlines-mod {
+	padding: 0 40px;
+}
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Tease Styles
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.tz {
+	background-color: whitesmoke;
+	padding: 40px;
+	& + & {
+		margin-top: 40px;
+	}
+}
