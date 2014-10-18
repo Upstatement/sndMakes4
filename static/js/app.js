@@ -13,12 +13,13 @@ $(document).ready(function(){
   //----- FUNCTIONS -----//
 
   function getHeadlines(event) {
-    var $input = $('.js-search-input');
-    var searchTerms = $input.value.split(' ').join(',');
-    ajaxNews(searchTerms);
+    event.preventDefault();
+    var $input = $('.js-headline-search');
+    var searchTerms = $input.val().split(' ').join(',');
+    ajaxNews(searchTerms, false);
   }
 
-  function ajaxNews(terms) {
+  function ajaxNews(terms, test) {
     console.log('terms: ' + terms);
     var url = "search.php?terms=" + terms; //something;
 
@@ -28,13 +29,22 @@ $(document).ready(function(){
     $.ajax({
       dataType: "json",
       url: url,
-      success: parseData
+      success: test ? testData : parseData
     });
 
   }
 
+  function testData (data) {
+    console.log(data);
+//    var $testItem = $('pre');
+//    $testItem.text(data);
+//    $('.test-container').html($testItem);
+  }
+
   function parseData(data) {
     console.log("data: " + data);
+
+    parsedData = data;
     // parse the json
     // callback and send data to template engine
 
@@ -57,10 +67,10 @@ $(document).ready(function(){
 
   //----- LISTENERS -----//
 
-  $('.search').on('submit', getHeadlines);
+  $('.headline-search').on('submit', getHeadlines);
 
   //----- TESTS -----//
 
-  ajaxNews('cheese,bears,ebola');
+  ajaxNews('cheese,bears,ebola', true);
 
 });
