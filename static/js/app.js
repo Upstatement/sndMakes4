@@ -106,7 +106,7 @@ $(document).ready(function(){
     var relatedHTML = twig({ ref: "related" }).render({related: data});
 
     // Display the rendered template
-    $('.search-filter-mod').html(relatedHTML);
+    $('.result-filter-mod').html(relatedHTML);
   }
 
   //----- LISTENERS -----//
