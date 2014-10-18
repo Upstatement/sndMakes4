@@ -123,10 +123,6 @@ $(document).ready(function(){
       }
     }
     insertSearchTermsIntoSearchBar();
-    //console.log(searchTerms[0]);
-    //$('#search-term-tokens').append("<li>helooooo</li>");
-    // parse each word out
-    // insert each word into the id 'search-term-tokens'
   });
 
   //----- TESTS -----//
