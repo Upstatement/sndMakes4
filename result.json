@@ -1,0 +1,30 @@
+{
+	"results" : [
+		{
+			"source"	:	{
+				"name"		:	"CNN",
+				"icon"		:	"http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/apple-touch-icon.png"
+			},
+			"headline"	: 	"New Ebola Czar Named",
+			"link"		:	"http://cnn.com",
+			"social"	:	{
+				"score"		:	97,
+				"facebook"	:	344,
+				"twitter"	:	611
+			}
+		},
+		{
+			"source"	:	{
+				"name"		:	"The New York Times",
+				"icon"		:	"http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/apple-touch-icon.png"
+			},
+			"headline"	: 	"For Obama, a new leader on the Ebola front",
+			"link"		:	"http://cnn.com",
+			"social"	:	{
+				"score"		:	97,
+				"facebook"	:	344,
+				"twitter"	:	611
+			}
+		}
+	]
+}
