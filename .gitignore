@@ -8,7 +8,6 @@ bower_components/**
 
 **/bower_components/
 
-xxx/.sass-cache/
 
 *.DS_Store
 .sass-cache*
