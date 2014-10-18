@@ -121,6 +121,9 @@ $(document).ready(function(){
       for (var i = 0; i < $numberOfSearchTerms; i++) {
         $('#search-term-tokens').append("<li>" + searchTerms[i] + "</li>");
       }
+      // clears search field input
+      $('#headline-search-input').val("").removeAttr('placeholder');
+
     }
     insertSearchTermsIntoSearchBar();
   });
