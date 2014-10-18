@@ -20,20 +20,7 @@
 // @import "base/breakpoint-var";
 // @import "base/var-fonts";
 
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Mixins
-//
-// --------------------------------------------
-// --------------------------------------------
-
-// @import "base/mixin-bp";
-// @import "base/mixin-fonts";
-
+$base-font: 'Open Sans', sans-serif;
 
 
 
@@ -45,34 +32,31 @@
 // --------------------------------------------
 // --------------------------------------------
 
-// @import "base/border";
 
-// @import "base/animation";
 
-// @import "base/layout";
-// @import "base/type";
-// @import "base/buttons";
+body {
+	background: red;
+	font-family: $base-font;
 
-// @import "base/objects";
-// @import "base/forms";
-// @import "base/icons";
+}
 
-// @import "base/gallery";
 
-// @import "base/header";
-// @import "base/footer";
 
-// @import "base/aside";
-// @import "base/nav";
-// @import "base/lists";
+h5 { padding: 12px; margin: 20px 0; font-size: 36px; background-color: black; color: yellow; }
 
-// @import "base/article";
 
-// @import "base/tease";
+// --------------------------------------------
+// --------------------------------------------
+//
+// Layout
+//
+// --------------------------------------------
+// --------------------------------------------
 
-// @import "base/stage";
+.headlines-mod {
+	padding: 0 40px;
+}
 
-// @import "base/page-header";
 
 // @import "base/print";
 
@@ -221,4 +205,19 @@ nav {
   padding: 1em;
   margin-bottom: 2em;
   border-bottom: 1px solid #eee;
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Tease Styles
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.tz {
+	background-color: whitesmoke;
+	padding: 40px;
+	& + & {
+		margin-top: 40px;
+	}
 }
