@@ -28,11 +28,23 @@ class Angler {
 	function get_social_stats( $link ) {
 		$social = new stdClass();
 		$social->facebook = self::get_social_stats_facebook( $link );
+		$social->twitter = self::get_social_stats_twitter( $link );
+		return $social;
 	}
 
 	function get_social_stats_facebook( $link ) {
 		$url = "https://api.facebook.com/method/fql.query?query=select%20total_count,like_count,comment_count,share_count,click_count%20from%20link_stat%20where%20url='".$link."'&format=json";
+		$result = self::curl_request( $url );
+		$fb = json_decode( $result );
+		return $fb[0]->total_count;
+		return $fb;
+	}
 
+	function get_social_stats_twitter( $link ) {
+		$url = 'http://urls.api.twitter.com/1/urls/count.json?url='.$link;
+		$result = self::curl_request( $url );
+		$twitter = json_decode( $result );
+		return $twitter->count;
 	}
 
 }
