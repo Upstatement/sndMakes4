@@ -313,13 +313,13 @@ nav h1 {
 
 .logo,
 .input-mod,
-.search-field,
+.headline-search-input,
 .search-toggle,
-#search_form {
+.headline-search {
   display: inline-block;
 }
 
-.search-field {
+.headline-search-input {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -362,7 +362,7 @@ nav h1 {
   border-radius: 0 3px 3px 0;
 }
 
-#search_form {
+.headline-search {
   position: relative;
   width: 80%;
 }

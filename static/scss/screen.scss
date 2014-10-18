@@ -147,13 +147,13 @@ nav {
 
 .logo,
 .input-mod,
-.search-field,
+.headline-search-input,
 .search-toggle,
-#search_form {
+.headline-search {
   display: inline-block;
 }
 
-.search-field {
+.headline-search-input {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -195,8 +195,7 @@ nav {
   }
 }
 
-// help
-#search_form {
+.headline-search {
   position: relative;
   width: 80%;
 }
