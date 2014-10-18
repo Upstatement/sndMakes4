@@ -20,6 +20,8 @@
 // @import "base/breakpoint-var";
 // @import "base/var-fonts";
 
+$base-font: 'Open Sans', sans-serif;
+
 
 
 // --------------------------------------------
@@ -32,7 +34,11 @@
 
 
 
-body { background: red; }
+body {
+	background: red;
+	font-family: $base-font;
+
+}
 
 
 
