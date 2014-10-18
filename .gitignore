@@ -13,3 +13,4 @@ bower_components/**
 .sass-cache*
 vendor*
 */cache*
+*/static/css
