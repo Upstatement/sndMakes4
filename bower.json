@@ -1,0 +1,21 @@
+{
+  "name": "sndMakes4",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Upstatement/sndMakes4",
+  "authors": [
+    "Christopher Plummer <plumcakes@mac.com>"
+  ],
+  "description": "Team 4 SND makes project",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Upbase": "git@github.com:Upstatement/upbase.git#~0.1.7"
+  }
+}
