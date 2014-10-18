@@ -18,16 +18,16 @@
                 {# Search #}
                 {% block search %}
                         {% include "search-form.twig" %}
-                {% endblock %} {# /search} #}
+                {% endblock %} {# /search #}
 
 
                 {# =============================== #}
                 {# Filters #}
-                {# block search_filters %}
+                {% block search_filters %}
                         <div class="search-filter-mod">
                                 {# include "search-filters.twig" #}
                         </div> <!-- /search-filter-mod -->
-                {# endblock %}  {# /filters #}
+                {% endblock %}  {# /filters #}
 
         </div> <!-- /input-mod -->
 </nav>
@@ -38,11 +38,6 @@
                 {# Results  #}
                 {% block result_filters %}
                         <div class="result-filter-mod">
-                                <ul class="tokens">
-                                        <li>Keyword</li>
-                                        <li>Another</li>
-                                        <li>Keyword</li>
-                                </ul>
                                 {# include "result-filters.twig" #}
                         </div> <!-- /result-filter-mod -->
                 {% endblock %}
