@@ -1,40 +1,416 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 224 of /Users/alisharamos/Desktop/Projects/sndMakes4/static/scss/screen.scss
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-219: 	padding: 40px;
-220: 	& + & {
-221: 		margin-top: 40px;
-222: 	}
-223: }
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
-Backtrace:
-/Users/alisharamos/Desktop/Projects/sndMakes4/static/scss/screen.scss:224
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:1163:in `expected'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:1099:in `expected'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:1094:in `tok!'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:643:in `block'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:635:in `ruleset'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:660:in `block_child'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:653:in `block_contents'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/scss/parser.rb:42:in `parse'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/engine.rb:393:in `_to_tree'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/engine.rb:268:in `render'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:329:in `block in watch'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
-/Users/alisharamos/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
-*/
-body:before {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+img {
+  line-height: 0;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small;
+  /*text-rendering: optimizeLegibility;*/
+  /* this causes problems in Chrome for Windows and on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+body, select, input, textarea {
+  color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a:hover, a:active {
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+nav ul, nav li {
+  margin: 0;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong, th {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+pre {
+  padding: 15px;
   white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 224 of /Users/alisharamos/Desktop/Projects/sndMakes4/static/scss/screen.scss\A \A 219: 	padding: 40px;\A 220: 	& + & {\A 221: 		margin-top: 40px;\A 222: 	}\A 223: }"; }
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+textarea {
+  overflow: auto;
+}
+
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+::-moz-selection {
+  background: #1d78af;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::selection {
+  background: #1d78af;
+  color: #FFF;
+  text-shadow: none;
+}
+
+a:link {
+  -webkit-tap-highlight-color: #1d78af;
+}
+
+button {
+  width: auto;
+  overflow: visible;
+}
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.a11y-only {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.ui-block:last-child,
+.ui-block.last {
+  margin-right: 0;
+}
+
+body {
+  background: red;
+  font-family: "Open Sans", sans-serif;
+}
+
+h5 {
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 36px;
+  background-color: black;
+  color: yellow;
+}
+
+.headlines-mod {
+  padding: 0 40px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-size: 16px;
+}
+
+nav {
+  background: #3e606f;
+  padding: 1em;
+  color: #fff;
+}
+nav h1 {
+  display: inline-block;
+}
+
+.logo {
+  width: 5%;
+}
+
+.input-mod {
+  width: 75%;
+}
+
+.logo,
+.input-mod,
+.search-field,
+.search-toggle,
+#search_form {
+  display: inline-block;
+}
+
+.search-field {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 13px;
+  border-radius: 4px;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.token {
+  color: #eee;
+  display: inline-block;
+}
+
+.search-toggle {
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.search-toggle span {
+  padding: 13px;
+  background-color: #548195;
+  color: rgba(255, 255, 255, 0.8);
+}
+.search-toggle span.active {
+  background-color: #69a2bb;
+}
+.search-toggle span:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.search-toggle span:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+#search_form {
+  position: relative;
+  width: 80%;
+}
+
+.search-term-wrapper {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+}
+
+.tokens li {
+  color: black;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #69a2bb;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+.tokens li:last-child {
+  margin-right: 0;
+}
+
+.result-filter-mod {
+  padding: 1em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee;
+}
+.result-filter-mod .tz {
+  background-color: whitesmoke;
+  padding: 40px;
+}
+.result-filter-mod .tz + .result-filter-mod .tz {
+  margin-top: 40px;
+}
