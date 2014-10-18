@@ -4,4 +4,4 @@
 
 	$terms = $_GET['terms'];
 	$terms = Angler::get_related_terms($terms);
-	echo json_encode($terms);
+	echo json_encode( array_values( $terms ) );
