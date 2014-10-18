@@ -3,6 +3,57 @@
 
 {% block content %}
 
-Hi {{name}}
+	Hi {{name}}
 
-{% endblock %}
+
+
+{# =============================== #}
+	{# Header #}
+
+	{% block header %}
+		<h5>header goes here</h5>
+	{% endblock %} {# /header #}
+
+
+	<div class="input-mod">
+		{# =============================== #}
+		{# Search #}
+		{% block search %}
+			{# include "search-form.twig" #}
+		{% endblock %} {# /search}
+
+
+		{# =============================== #}
+		{# Filters #}
+		{% block search_filters %}
+			<div class="search-filter-mod">
+				{# include "search-filters.twig" #}
+			</div> <!-- /search-filter-mod -->
+		{% endblock %}  {# /filters #}
+
+	</div> <!-- /input-mod -->
+
+
+
+	<div class="result-mod">
+		{# =============================== #}
+		{# Results  #}
+		{% block result_filters %}
+			<div class="result-filter-mod">
+				{# include "result-filters.twig" #}
+			</div> <!-- /result-filter-mod -->
+		{% endblock %}
+
+
+
+		{# =============================== #}
+		{# Results  #}
+		{% block headlines %}
+			<div class="headlines-mod">
+				{% include "headlines.twig" %}
+			</div> <!-- /headlines -->
+		{% endblock %} {# /headlines #}
+	</div> <!-- /result-mod -->
+
+
+{% endblock %} {# /content #}
