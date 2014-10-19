@@ -40,6 +40,8 @@ $(document).ready(function(){
       url: url,
       success: test ? testData : parseData
     });
+
+    $('.loading').addClass('is-open');
   }
 
   function testData (data) {
@@ -73,6 +75,7 @@ $(document).ready(function(){
 
     // render the template
     var headlinesHTML = twig({ ref: "headlines" }).render({headlines: parsedData});
+    $('.loading').removeClass('is-open');
 
     // Display the rendered template
     $('.headlines-mod').html(headlinesHTML);
