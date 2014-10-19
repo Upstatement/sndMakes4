@@ -265,6 +265,20 @@ nav {
     	background-color: darken($secondary, 5%);
     }
   }
+  .token-delete {
+    content: 'x';
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    background: $black-50;
+    border-left: 1px solid darken($secondary, 10%);
+    padding: 3px 6px 3px 10px;
+    z-index: 50;
+    &:hover {
+      background-color: darken($secondary, 15%);
+    }
+  }
 }
 
 @-webkit-keyframes popIn {

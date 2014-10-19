@@ -117,6 +117,14 @@ $(document).ready(function(){
 
   //----- LISTENERS -----//
 
+   // Clear tokens on clicking the x
+   var deleteToken = function() {
+    $('.token-delete').on('click', function() {
+      console.log('delete');
+      $(this).parent().remove();
+    })
+  };
+
   $('.headline-search').on('submit', getHeadlines);
   $('.headline-search').on('submit', function() {
     event.preventDefault();
@@ -126,13 +134,14 @@ $(document).ready(function(){
 
     var insertSearchTermsIntoSearchBar = function() {
       for (var i = 0; i < $numberOfSearchTerms; i++) {
-        $('#search-term-tokens').append("<li>" + searchTerms[i] + "</li>");
+        $('#search-term-tokens').append("<li>" + searchTerms[i] + "<span class='token-delete'>x</span></li>");
       }
       // clears search field input
       $('#headline-search-input').val("").removeAttr('placeholder');
 
     }
     insertSearchTermsIntoSearchBar();
+    deleteToken();
   });
 
   // Clear the input form (and fake input tokens) on focus
@@ -146,6 +155,8 @@ $(document).ready(function(){
   };
 
   clearSearchBar();
+
+
 
   //----- TESTS -----//
 

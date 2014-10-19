@@ -423,6 +423,20 @@ nav h1 {
 .tokens li:hover {
   background-color: #5797b3;
 }
+.tokens .token-delete {
+  content: 'x';
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  background: #7a7577;
+  border-left: 1px solid #4b8aa6;
+  padding: 3px 6px 3px 10px;
+  z-index: 50;
+}
+.tokens .token-delete:hover {
+  background-color: #437c94;
+}
 
 @-webkit-keyframes popIn {
   0% {
