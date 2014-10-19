@@ -10,7 +10,7 @@
 				</h1>
 
 				<div class="tz-meta">
-					<!-- <h4 class="tz-timestamp">{{ newsItem.publishedDate }}</h4> -->
+
 					<!-- <h4 class="tz-byline">By <span class="tz-author">Nite Plummer</span></h4> -->
 				</div> <!-- /tz-meta -->
 
@@ -24,7 +24,9 @@
 			<div class="ui-block-inner">
 				<div class="tz-social-mod">
 				<h4 class="tz-source"><a class="source-link" href="#">{{newsItem.source.name}}</a></h4>
+				<h4 class="tz-timestamp">{{ newsItem.publishedDate }}</h4>
 					<div class="tz-social">
+
 						<ul class="social-heat-items">
 							{% for i in newsItem.social.score %}
 							<li class="social-heat-item"></li>
@@ -37,6 +39,7 @@
 						</ul>
 
 						<div class="share-info">
+
 							<p class="social-shares-label">Shares</p>
 							<p class="social-shares facebook">
 								<span class="social-shares-icon"></span>

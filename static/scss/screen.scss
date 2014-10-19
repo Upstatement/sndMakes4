@@ -345,7 +345,11 @@ nav {
 }
 
 
-.tz-timestamp { color: $tz-source; }
+.tz-timestamp {
+	color: $black-20;
+	font-size: 11px;
+	margin-bottom: 15px;
+}
 
 .tz-byline { color: $tz-author; }
 
@@ -422,7 +426,6 @@ nav {
 .tz-source {
 	color: $black-50;
 	font-size: 12px;
-	margin-bottom: 15px;
 	cursor: pointer;
 
 }
@@ -560,7 +563,7 @@ nav {
 	background-color: #fff;
 	padding: 40px;
 	max-width: 1100px;
-	height: 400px;
+	height: 450px;
 	margin: 0 auto;
 	border: 1px solid darken($bg, 5%);
 	position: absolute;
