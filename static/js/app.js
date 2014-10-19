@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   //----- VARS -----//
 
+  var lastSearch = ""; //will be value of last search to use when adding related words
+
   var template = twig({
     id: "headlines",
     href: "templates/ajax-headlines.twig",
@@ -115,12 +117,22 @@ $(document).ready(function(){
     $('.result-filter-mod').append(relatedHTML);
   }
 
+  function addWord(event) {
+    var $target = $(event.target);
+    var $input = $('.js-headline-search');
+    var wordToAdd = $target.text();
+    var $searchTokens = $('#search-term-tokens');
+
+    $input.val(lastSearch + ' ' + wordToAdd);
+    $('#search-term-tokens').empty();
+    $input.submit();
+  }
+
   //----- LISTENERS -----//
 
    // Clear tokens on clicking the x
    var deleteToken = function() {
     $('.token-delete').on('click', function() {
-      console.log('delete');
       $(this).parent().remove();
     })
   };
@@ -129,6 +141,7 @@ $(document).ready(function(){
   $('.headline-search').on('submit', function() {
     event.preventDefault();
     var $input = $('.js-headline-search');
+    lastSearch = $input.val();
     var searchTerms = $input.val().split(' ');
     var $numberOfSearchTerms = searchTerms.length;
 
@@ -143,6 +156,8 @@ $(document).ready(function(){
     insertSearchTermsIntoSearchBar();
     deleteToken();
   });
+
+  $('.result-filter-mod').on('click', 'li', addWord);
 
   // Clear the input form (and fake input tokens) on focus
   var clearSearchBar = function() {
