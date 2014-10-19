@@ -107,7 +107,7 @@ $(document).ready(function(){
 
     // First clear the related keywords bar
     $('.result-filter-mod').empty();
-    
+
     // Display the rendered template
     $('.result-filter-mod').html(relatedHTML);
   }
@@ -134,7 +134,7 @@ $(document).ready(function(){
 
   // Clear the input form (and fake input tokens) on focus
   var clearSearchBar = function() {
-    $('#headline-search-input').focus(function() {
+    $('#headline-search-input').on('click', function() {
       console.log('focus');
       $(this).val("");
       $('#search-term-tokens').empty();

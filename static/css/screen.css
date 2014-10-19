@@ -388,15 +388,25 @@ nav h1 {
   padding: 5px;
   border-radius: 4px;
   margin-right: 4px;
+  -webkit-animation: popIn 0.3s ease;
 }
 .tokens li:last-child {
   margin-right: 0;
 }
 
+@-webkit-keyframes popIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .result-filter-mod {
   padding: 1em;
   margin-bottom: 2em;
   border-bottom: 1px solid #eee;
+  background: #fff;
   box-shadow: 0px 3px 4px 0px rgba(178, 178, 178, 0.2);
 }
 
