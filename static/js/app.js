@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   //----- VARS -----//
 
+  var lastSearch = ""; //will be value of last search to use when adding related words
+
   var template = twig({
     id: "headlines",
     href: "templates/ajax-headlines.twig",
@@ -48,11 +50,20 @@ $(document).ready(function(){
   function parseData(data) {
     console.log(data);
 
-    parsedData = data;
-    // parse the json
-    // callback and send data to template engine
+    for (var i = 0; i < data.length; i +=1) {
+      if (data[i].publishedDate) {
+        data[i].publishedDate = fixDate(data[i].publishedDate);
+      }
+    }
 
+    parsedData = data;
     renderHeadlines(parsedData);
+  }
+
+  function fixDate(dateToFix) {
+    var fixedDate = moment(dateToFix).fromNow();
+    console.log (fixedDate);
+    return fixedDate;
   }
 
   function renderHeadlines(parsedData) {
@@ -115,20 +126,42 @@ $(document).ready(function(){
     $('.result-filter-mod').append(relatedHTML);
   }
 
+  function addWord(event) {
+    var $target = $(event.target);
+    var $input = $('.js-headline-search');
+    var wordToAdd = $target.text();
+    var $searchTokens = $('#search-term-tokens');
+
+    $input.val(lastSearch + ' ' + wordToAdd);
+    $('#search-term-tokens').empty();
+    $input.submit();
+  }
+
   //----- LISTENERS -----//
 
    // Clear tokens on clicking the x
    var deleteToken = function() {
+    // superficially delete it
     $('.token-delete').on('click', function() {
-      console.log('delete');
       $(this).parent().remove();
     })
   };
+
+  // Actually delete it from the search string
+    $('.token-delete').on('click', function() {
+      // take the target (this)
+      var $wordToDelete = $(this);
+      var lastSearch = lastSearch.replace($wordToDelete, "");
+      var $input = $('.js-headline-search');
+      $input.submit();
+      console.log(lastSearch);
+    });
 
   $('.headline-search').on('submit', getHeadlines);
   $('.headline-search').on('submit', function() {
     event.preventDefault();
     var $input = $('.js-headline-search');
+    lastSearch = $input.val();
     var searchTerms = $input.val().split(' ');
     var $numberOfSearchTerms = searchTerms.length;
 
@@ -143,6 +176,8 @@ $(document).ready(function(){
     insertSearchTermsIntoSearchBar();
     deleteToken();
   });
+
+  $('.result-filter-mod').on('click', 'li', addWord);
 
   // Clear the input form (and fake input tokens) on focus
   var clearSearchBar = function() {
