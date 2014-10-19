@@ -6,7 +6,7 @@ class Angler {
 		if ( is_array( $terms ) ) {
 			$terms = implode( '&', $terms );
 		}
-		$query = 'https://ajax.googleapis.com/ajax/services/search/news?q='.$terms.'&v=1.0';
+		$query = 'https://ajax.googleapis.com/ajax/services/search/news?q='.$terms.'&v=1.0&rsz=8';
 		$results = self::curl_request( $query );
 		$results = json_decode( $results );
 		$results = $results->responseData->results;
