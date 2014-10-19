@@ -209,7 +209,10 @@ nav {
     padding: 13px;
     background-color: $inactive-bg;
     color: $inactive-text;
-    &:hover { background-color: darken($inactive-bg, 2%); }
+    &:hover { 
+      background-color: darken($inactive-bg, 2%);
+      cursor: pointer;
+    }
     &.active {
       background-color: $secondary;
       &:hover {

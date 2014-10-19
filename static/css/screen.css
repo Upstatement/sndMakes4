@@ -373,6 +373,7 @@ nav h1 {
 }
 .search-toggle span:hover {
   background-color: #507b8e;
+  cursor: pointer;
 }
 .search-toggle span.active {
   background-color: #69a2bb;
