@@ -5,41 +5,54 @@
 
 
 {# =============================== #}
-        {# Header #}
-<nav>
-        {% block header %}
-        <div class="logo">
-                <h1>Anglr</h1>
-        </div>
-        {% endblock %} {# /header #}
+    {# Header #}
 
-        <div class="input-mod">
-                {# =============================== #}
-                {# Search #}
-                {% block search %}
-                        {% include "search-form.twig" %}
-                {% endblock %} {# /search #}
+    <div class="site-nav-mod">
+    	<div class="l-site-width">
+		<nav>
+		        {% block header %}
+		        <div class="logo">
+		                <h1>Anglr</h1>
+		        </div>
+		        {% endblock %} {# /header #}
+
+		        <div class="input-mod">
+		                {# =============================== #}
+		                {# Search #}
+		                {% block search %}
+	                        {% include "search-form.twig" %}
+		                {% endblock %} {# /search #}
 
 
-                {# =============================== #}
-                {# Filters #}
-                {% block search_filters %}
-                        <div class="search-filter-mod">
-                                {# include "search-filters.twig" #}
-                        </div> <!-- /search-filter-mod -->
-                {% endblock %}  {# /filters #}
 
-        </div> <!-- /input-mod -->
-</nav>
+		                {# =============================== #}
+		                {# Filters #}
+		                {% block search_filters %}
+		                        <div class="search-filter-mod">
+		                                {# include "search-filters.twig" #}
+		                        </div> <!-- /search-filter-mod -->
+		                {% endblock %}  {# /filters #}
+
+		        </div> <!-- /input-mod -->
+		</nav>
+		</div> <!-- l-site-width -->
+	</div> <!-- /site-nav-mod -->
+
+
 
 
         <div class="result-mod">
                 {# =============================== #}
                 {# Results  #}
+
                 {% block result_filters %}
-                        <div class="result-filter-mod">
-                                {# include "result-filters.twig" #}
-                        </div> <!-- /result-filter-mod -->
+                	<div class="result-filter-wrapper">
+	                	<div class="l-site-width">
+		                    <div class="result-filter-mod">
+		                            {# include "result-filters.twig" #}
+		                    </div> <!-- /result-filter-mod -->
+	                    </div> <!-- /l-site-width -->
+                    </div> <!-- /result-filter-wrapper -->
                 {% endblock %}
 
 
@@ -47,9 +60,19 @@
                 {# =============================== #}
                 {# Results  #}
                 {% block headlines %}
+
+
+
                         <div class="headlines-mod">
-                                {% include "headlines.twig" %}
+
                         </div> <!-- /headlines -->
+
+
+		        		<div class="opener-mod">
+							<img src="static/img/opener.png">
+							<h3 class="opener-head">Search the best angle for your story</h3>
+							<a href="#" class="what">What is this?</a>
+						</div> <!-- /opener-mod -->
                 {% endblock %} {# /headlines #}
         </div> <!-- /result-mod -->
 
