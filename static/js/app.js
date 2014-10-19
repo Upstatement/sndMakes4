@@ -172,6 +172,16 @@ $(document).ready(function(){
 
   $('.result-filter-mod').on('click', 'li', addWord);
 
+
+  $('#about-link').on('click', function(event) {
+    event.preventDefault();
+    $('.about-mod').addClass('is-open');
+  });
+
+  $('.about-close').on('click', function(event) {
+    event.preventDefault();
+    $('.about-mod').removeClass('is-open');
+  });
   // Clear the input form (and fake input tokens) on focus
   var clearSearchBar = function() {
     $('#headline-search-input').on('click', function() {
