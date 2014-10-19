@@ -156,6 +156,7 @@ nav {
   font-weight: normal;
   text-align: center;
   margin-right: 15px;
+  cursor: pointer;
   &:hover {
   	background-color: darken($secondary, 5%);
   }
