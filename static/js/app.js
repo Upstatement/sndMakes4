@@ -50,11 +50,20 @@ $(document).ready(function(){
   function parseData(data) {
     console.log(data);
 
-    parsedData = data;
-    // parse the json
-    // callback and send data to template engine
+    for (var i = 0; i < data.length; i +=1) {
+      if (data[i].publishedDate) {
+        data[i].publishedDate = fixDate(data[i].publishedDate);
+      }
+    }
 
+    parsedData = data;
     renderHeadlines(parsedData);
+  }
+
+  function fixDate(dateToFix) {
+    var fixedDate = moment(dateToFix).fromNow();
+    console.log (fixedDate);
+    return fixedDate;
   }
 
   function renderHeadlines(parsedData) {
