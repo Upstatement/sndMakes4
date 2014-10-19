@@ -303,6 +303,7 @@ h5 {
 }
 
 nav {
+  overflow: hidden;
   padding: 0;
   color: #fff;
   height: 78px;
@@ -312,6 +313,7 @@ nav h1 {
 }
 
 .logo {
+  font-size: 1.6em;
   width: 8%;
   max-width: 150px;
   line-height: 78px;
@@ -334,10 +336,10 @@ nav h1 {
 .search-toggle,
 .headline-search {
   display: inline-block;
-  cursor: pointer;
 }
 
 .headline-search-input {
+  width: 95%;
   position: relative;
   overflow: hidden;
   padding: 13px;
@@ -387,6 +389,7 @@ nav h1 {
 
 .headline-search {
   position: relative;
+  width: 80%;
 }
 
 .search-term-wrapper {
