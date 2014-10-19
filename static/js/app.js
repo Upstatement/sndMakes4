@@ -108,8 +108,11 @@ $(document).ready(function(){
     // First clear the related keywords bar
     $('.result-filter-mod').empty();
 
+    // Display 'suggested keywords' helper text
+    $('.result-filter-mod').append("<h4>Suggested Keywords</h4>");
+
     // Display the rendered template
-    $('.result-filter-mod').html(relatedHTML);
+    $('.result-filter-mod').append(relatedHTML);
   }
 
   //----- LISTENERS -----//
