@@ -14,6 +14,7 @@
         {% endblock %} {# /header #}
 
         <div class="input-mod">
+        	<div class="l-site-width">
                 {# =============================== #}
                 {# Search #}
                 {% block search %}
@@ -36,6 +37,7 @@
                 </span>
                         {% include "search-form.twig" %}
                 {% endblock %} {# /search} #}
+                </div> <!-- /l-site-width -->
 
 
                 {# =============================== #}
@@ -70,7 +72,7 @@
                 {# Results  #}
                 {% block headlines %}
                         <div class="headlines-mod">
-                                {% include "headlines.twig" %}
+
                         </div> <!-- /headlines -->
                 {% endblock %} {# /headlines #}
         </div> <!-- /result-mod -->
