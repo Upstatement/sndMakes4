@@ -48,7 +48,30 @@ class Angler {
 		$f = count( $terms );
 		$result = json_decode( $result );
 		$result = $result[$f];
+		$result = self::purify_related_terms( $terms, $result );
 		return $result;
+	}
+
+	static function purify_related_terms( $search, $results ) {
+		if (is_string( $serach )) {
+			$search = implode('&', $search);
+		}
+		if (!is_array($search)) {
+			$search = array($search);
+		}
+		$final_words;
+		foreach ( $results as &$result ) {
+			$words = explode(' ', $result);
+			foreach($search as $s) {
+				foreach($words as &$word) {
+					if ($s != $word) {
+						$final_words[] = $word;
+					}
+				}
+			}
+		}
+		$final_words = array_unique( $final_words );
+		return $final_words;
 	}
 
 	static function get_social_stats_facebook( $link ) {

@@ -1,7 +1,24 @@
 {% block search %}
-<form class="headline-search" action="/" method="get">
+<!-- <form class="headline-search" action="/" method="get">
   <input type="search" id="headline-search-input" class="headline-search-input js-headline-search" placeholder="Yo! Search me!"></input>
   <label for="headline-search-input">Label</label>
   <input type="submit" class="headline-search-submit">
+</form> -->
+
+{# include "search-form.twig" #}
+<form class="headline-search" action="/" method="get" id="search_form">
+	<div class="search-term-wrapper">
+	        <ul id="search-term-tokens" class="tokens">
+	        </ul>
+	</div>
+	<input type="search" id="headline-search-input" class="headline-search-input js-headline-search" value="" placeholder="Type your search here"></input>
+<!-- 	<input type="submit" class="headline-search-submit" /> -->
 </form>
+
+<div class="search-toggle">
+       <span class="active">Trending</span><span>Latest</span>
+</div>
+
+<span class="search-icon"></span>
+
 {% endblock %}
