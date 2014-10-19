@@ -429,13 +429,18 @@ nav h1 {
   height: 10px;
   margin-left: 10px;
   padding-left: 10px;
-  background: #7a7577;
-  border-left: 1px solid #4b8aa6;
-  padding: 3px 6px 3px 10px;
+  background: #4b8aa6;
+  border-left: 1px solid #437c94;
+  padding: 3px 10px 3px 10px;
   z-index: 50;
+  border-radius: 0 4px 4px 0;
 }
 .tokens .token-delete:hover {
   background-color: #437c94;
+}
+
+#search-term-tokens > li {
+  padding: 5px 0 5px 5px;
 }
 
 @-webkit-keyframes popIn {
