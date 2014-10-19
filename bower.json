@@ -19,6 +19,7 @@
     "Upbase": "git@github.com:Upstatement/upbase.git#~0.1.7",
     "twig.js": "~0.7.2",
     "jquery": "~2.1.1",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "moment": "~2.8.3"
   }
 }
