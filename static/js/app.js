@@ -147,8 +147,8 @@ $(document).ready(function(){
     // superficially delete it
     $('.token-delete').on('click', function() {
       $(this).parent().remove();
-    })
-  };
+    });
+    }
 
   $('.headline-search').on('submit', getHeadlines);
   $('.headline-search').on('submit', function() {
@@ -184,14 +184,13 @@ $(document).ready(function(){
 
   clearSearchBar();
 
-  // Actually delete it from the search string
+  // Actually delete it
   $('.token-delete').on('click', function() {
-    console.log('you are deleting something');
-    var $wordToDelete = $(this);
-    var lastSearch = lastSearch.replace($wordToDelete, "");
-    var $input = $('.js-headline-search');
-    $input.submit();
-    console.log(lastSearch);
+      var $wordToDelete = $(this).parent().text();
+      lastSearch = lastSearch.replace($wordToDelete, "");
+      var $input = $('.js-headline-search');
+      $input.submit();
+      console.log(lastSearch);
   });
 
   //----- TESTS -----//
