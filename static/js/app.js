@@ -150,16 +150,6 @@ $(document).ready(function(){
     })
   };
 
-  // Actually delete it from the search string
-    $('.token-delete').on('click', function() {
-      // take the target (this)
-      var $wordToDelete = $(this);
-      var lastSearch = lastSearch.replace($wordToDelete, "");
-      var $input = $('.js-headline-search');
-      $input.submit();
-      console.log(lastSearch);
-    });
-
   $('.headline-search').on('submit', getHeadlines);
   $('.headline-search').on('submit', function() {
     event.preventDefault();
@@ -194,7 +184,15 @@ $(document).ready(function(){
 
   clearSearchBar();
 
-
+  // Actually delete it from the search string
+  $('.token-delete').on('click', function() {
+    console.log('you are deleting something');
+    var $wordToDelete = $(this);
+    var lastSearch = lastSearch.replace($wordToDelete, "");
+    var $input = $('.js-headline-search');
+    $input.submit();
+    console.log(lastSearch);
+  });
 
   //----- TESTS -----//
 
