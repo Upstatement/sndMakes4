@@ -132,10 +132,21 @@ $(document).ready(function(){
 
    // Clear tokens on clicking the x
    var deleteToken = function() {
+    // superficially delete it
     $('.token-delete').on('click', function() {
       $(this).parent().remove();
     })
   };
+
+  // Actually delete it from the search string
+    $('.token-delete').on('click', function() {
+      // take the target (this)
+      var $wordToDelete = $(this);
+      var lastSearch = lastSearch.replace($wordToDelete, "");
+      var $input = $('.js-headline-search');
+      $input.submit();
+      console.log(lastSearch);
+    });
 
   $('.headline-search').on('submit', getHeadlines);
   $('.headline-search').on('submit', function() {
