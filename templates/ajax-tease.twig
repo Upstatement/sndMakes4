@@ -6,7 +6,7 @@
 
 
 				<h1 class="tz-head">
-					<a class="tz-head-link" href="#">{{ newsItem.headline }}</a>
+					<a class="tz-head-link" href="{{ newsItem.link }}">{{ newsItem.headline }}</a>
 				</h1>
 
 				<div class="tz-meta">
@@ -23,7 +23,7 @@
 		<div class="ui-block-2">
 			<div class="ui-block-inner">
 				<div class="tz-social-mod">
-				<h4 class="tz-source"><a class="source-link" href="#">{{newsItem.source.name}}</a></h4>
+				<h4 class="tz-source"><a class="source-link" href="{{ newsItem.link }}">{{newsItem.source.name}}</a></h4>
 				<h4 class="tz-timestamp">{{ newsItem.publishedDate }}</h4>
 					<div class="tz-social">
 
