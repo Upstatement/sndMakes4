@@ -160,6 +160,7 @@ nav {
   &:hover {
   	background-color: darken($secondary, 5%);
   }
+  a { text-decoration: none; color: #fff; }
 }
 
 .input-mod {
